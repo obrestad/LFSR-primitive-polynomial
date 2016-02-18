@@ -16,14 +16,15 @@ def check_server():
 		sys.exit(1)
 
 def work(n):
-	p = Polynomial(n)
-	if(p.primitive()):
-		print(n, p)
-		r.rpush("primitive", n)
+	for i in range(n, n+100):
+		p = Polynomial(i)
+		if(p.primitive()):
+			print(n, p)
+			r.rpush("primitive", n)
  
 def main():
 	with concurrent.futures.ProcessPoolExecutor() as executor:
-		for i in range(2 ** int(sys.argv[1]), 2 ** (int(sys.argv[2]) + 1)):
+		for i in range(2 ** int(sys.argv[1]), 2 ** (int(sys.argv[2]) + 1), 100):
 			executor.submit(work, i)
 
 	print(r.lrange("primitive", 0, -1))
