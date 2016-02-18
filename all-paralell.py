@@ -19,8 +19,8 @@ def work(n):
 	for i in range(n, n+100):
 		p = Polynomial(i)
 		if(p.primitive()):
-			print(n, p)
-			r.rpush("primitive", n)
+			print(i, p)
+			r.rpush("primitive", i)
  
 def main():
 	with concurrent.futures.ProcessPoolExecutor() as executor:
