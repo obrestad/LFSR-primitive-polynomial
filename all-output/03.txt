@@ -1,9 +1,0 @@
-Starting up
-11 x^3+x+1
-13 x^3+x^2+1
-[b'11', b'13']
-Done
-
-real	0m0.137s
-user	0m0.083s
-sys	0m0.115s
