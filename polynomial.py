@@ -142,7 +142,12 @@ class Polynomial:
 		
 		# Test x^(2^n-1/p) prime-factor stuff.
 		n = (2 ** self.degree) - 1
-		factors = set(prime_factors(n))
+		factors = prime_factors(n)
+
+		if(len(factors) == 1):
+			return True
+		else:
+			factors = set(factors)
 		
 		for factor in factors:
 			p = Polynomial(2 ** int(n / factor))
