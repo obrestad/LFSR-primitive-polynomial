@@ -1,0 +1,8 @@
+Starting up
+7 x^2+x+1
+[b'7']
+Done
+
+real	0m0.106s
+user	0m0.068s
+sys	0m0.091s

@@ -1,0 +1,9 @@
+Starting up
+19 x^4+x+1
+25 x^4+x^3+1
+[b'19', b'25']
+Done
+
+real	0m0.104s
+user	0m0.062s
+sys	0m0.102s
