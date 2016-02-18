@@ -140,6 +140,12 @@ class Polynomial:
 		if(not self.irreducible()):
 			return False
 		
+		# If mersenne prime, skip last check
+		if(self.degree in [2, 3, 5, 7, 13, 17, 19, 31, 61, 89, 107, 127, 521, 
+		607, 1279, 2203, 2281, 3217, 4253, 4423, 9689, 
+		9941, 11213, 19937]):
+			return True
+
 		# Test x^(2^n-1/p) prime-factor stuff.
 		n = (2 ** self.degree) - 1
 		factors = prime_factors(n)
