@@ -22,7 +22,7 @@ def work(n):
 		r.rpush("primitive", n)
  
 def main():
-	with concurrent.futures.ProcessPoolExecutor(max_workers=32) as executor:
+	with concurrent.futures.ProcessPoolExecutor() as executor:
 		for i in range(2 ** int(sys.argv[1]), 2 ** (int(sys.argv[2]) + 1)):
 			executor.submit(work, i)
 
